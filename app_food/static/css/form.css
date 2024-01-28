@@ -1,0 +1,39 @@
+.conteinerForm {
+    text-align: center;
+    margin: 50px;
+}
+
+.fields_form input,
+.fields_form select,
+button {
+    background: #222;
+    color: #fff;
+    padding: 5px;
+    margin: 5px;
+    border-radius: 5px;
+    min-width: 30%;
+}
+
+
+.fields_form select {
+    background: #222;
+    color: #fff;
+    padding: 5px;
+    margin: 5px;
+    border-radius: 5px;
+    min-height: 150px;
+    min-width: 20%;
+}
+
+.formProduct input {
+    background: #222;
+    color: #fff;
+    padding: 5px;
+    margin: 5px;
+    border-radius: 5px;
+    min-width: 30%;
+}
+
+.formProduct button {
+    min-width: 10%;
+}

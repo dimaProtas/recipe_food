@@ -1,0 +1,17 @@
+{% extends 'base/base.html' %}
+
+{% block title %}Add Recipe{% endblock %}
+
+{% block content %}
+    <h2>Добавить рецепт</h2>
+    <div class="conteinerForm">
+        <form method="post" enctype="multipart/form-data">
+            {% csrf_token %}
+            <div class="fields_form">{{ form.as_p }}</div>
+            <button type="submit">Добавить</button>
+        </form>
+    </div>
+    {% if request.path != '/form_mass_product/' %}
+        <a href="{% url 'form_mass_product' %}">Добавить массу продукта для рецепта</a>
+    {% endif %}
+{% endblock %}

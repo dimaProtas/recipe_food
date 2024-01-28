@@ -1,0 +1,17 @@
+.containerRecipe {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.recipe {
+    background-color: #222;
+    color: #fff;
+    border-radius: 10px;
+    padding: 10px;
+    margin: 10px;
+}
+
+.titleRecipe {
+    background-color: #20B2AA;
+    padding: 3px;
+}

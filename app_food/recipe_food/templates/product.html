@@ -1,0 +1,19 @@
+{% extends 'base/base.html' %}
+{% load static %}
+
+{% block title %}Product{% endblock %}
+
+{% block content %}
+    <h2>Продукты</h2>
+    <div id="formProduct" class="formProduct">
+        {% csrf_token %}
+        <input id="name_product" />
+        <button onclick="addName()">Добавить</button>
+    </div>
+<div id="containerProduct" class="containerProduct">
+        {% for i in products_list %}
+            <p class="product">Приготовлено блюд {{ i.count_cooked }} c продуктом <a href="{% url 'show_recipes_without_product' product_id=i.id %}" style="color: #20B2AA;">"{{ i.name }}"</a></p>
+        {% endfor %}
+    </div>
+    <script src="{% static 'JavaScript/script_product.js' %}"></script>
+{% endblock %}

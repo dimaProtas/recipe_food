@@ -1,0 +1,22 @@
+{% extends 'base/base.html' %}
+
+{% block title %}Recipe{% endblock %}
+
+{% block content %}
+    <h2>Рецепты</h2>
+    <div class="containerRecipe">
+        {% for i in recipe_list %}
+            <div class="recipe">
+                <p class="titleRecipe">{{ i.name }}</p>
+                <ul>
+                    {% for x in i.mass_product_id.all %}
+                        <li>({{ x.product_id }} {{ x.mass_product }} г.)</li>
+                    {% endfor %}
+                </ul>
+            </div>
+
+        {% endfor %}
+    </div>
+    <a href="{% url 'form-recipe' %}">Добавить рецепт</a>
+
+{% endblock %}

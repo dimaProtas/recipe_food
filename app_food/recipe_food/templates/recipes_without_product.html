@@ -1,0 +1,23 @@
+{% extends 'base/base.html' %}
+
+{% block title %}Table{% endblock %}
+
+{% block content %}
+    <h1>Рецепты без продукта "{{ product.name }}"</h1>
+    <table border="1">
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>Name</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for recipe in recipes %}
+            <tr>
+                <td>{{ recipe.id }}</td>
+                <td>{{ recipe.name }}</td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+{% endblock %}
